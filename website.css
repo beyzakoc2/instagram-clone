@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+}
+.container{
+    margin: 0 auto;
+    margin-left: 10px;
+    width: 200px;
+    overflow: hidden;
+    flex-direction: column;
+}
+.top-container{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    border-right: 1px solid white;
+}
+h1{
+    padding: 8px;
+    font-weight: normal;
+}
+h1.ins{
+    padding-bottom: 20px;
+}
+h1.fazla{
+    padding-top: 40px;
+}
