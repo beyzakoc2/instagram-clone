@@ -112,7 +112,7 @@ min-width: 500px;
 
 .post-footer i {
   margin-right: 10px;
-  color: black;
+  color: white;
 }
 
 p.aciklama{
@@ -124,10 +124,8 @@ p.aciklama{
   flex: 1;
   min-width: 250px;
   position: relative;
-  border: 1px solid #bababa;
   padding: 15px;
-  background-color: #111;
-  border-radius: 8px;
+  background-color: black;
   color: white;
 }
 .sidebar h3 {
@@ -148,9 +146,14 @@ p.aciklama{
 .öneriler strong { display: block; }
 .öneriler button {
   margin-left: auto;
-  padding: 5px 10px;
   border: none;
   background: #0095f6;
   color: white;
   border-radius: 5px;
   }
+.siz img{
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  }
+.siz strong { display: inline-block; }
