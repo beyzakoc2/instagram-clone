@@ -1,42 +1,49 @@
 body{
     background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .container{
-    margin: 0 auto;
+    margin-top: 0;
     margin-left: 10px;
-    width: 200px;
+    width: 0;
     height: 0;
     flex-direction: column;
 }
 .top-container{
-    text-decoration: none;
-    color: white;
-    font-size: 12px;
-    border-right: 1px solid white;
-    overflow: hidden;
-    display: inline-block;
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: black;
+    border-right: 1px solid #ccc;
+    padding: 20px 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 9px;
 }
 h1{
     padding: 8px;
     font-weight: normal;
 }
 h1.ins{
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    padding-top: 0;
 }
 h1.fazla{
     padding-top: 40px;
 }
 .yazi{
     color: white;
-    display: inline-block;
     font-size: 11px;
+    display: inline-block;
     margin-top: 30px ;
     margin-left: 350px;
     font-weight:lighter;  
 }
 .stories {
-  width: 600px;
+  width: 610px;
   display: flex;
   overflow: hidden;
   padding: 10px;
@@ -58,12 +65,22 @@ h1.fazla{
 }
 
 .feed {
-  max-width: 500px;
-  margin-left: 450px;
+flex: 2;
+min-width: 500px;
+}
+
+.content-wrapper {
+  margin-left: 330px;; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px; 
+  max-width: 1100px;
+  padding: 0 20px;
 }
 
 .post {
-  border: 1px solid #ccc;
+  justify-content: center;
   margin-bottom: 20px;
   border-radius: 5px;
 }
@@ -76,8 +93,8 @@ h1.fazla{
 }
 
 .kisi {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -85,6 +102,7 @@ h1.fazla{
 .post-image {
   width: 100%;
   display: block;
+  border: 2px solid #ccc;
 }
 
 .post-footer {
@@ -96,3 +114,43 @@ h1.fazla{
   margin-right: 10px;
   color: black;
 }
+
+p.aciklama{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.sidebar {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+  border: 1px solid #bababa;
+  padding: 15px;
+  background-color: #111;
+  border-radius: 8px;
+  color: white;
+}
+.sidebar h3 {
+  color: white;
+  margin: 0 0 15px;
+  font-size: 16px;
+}
+.öneriler {
+  display: flex;
+  align-items: end;
+  margin-bottom: 12px;
+}
+.öneriler img {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.öneriler strong { display: block; }
+.öneriler button {
+  margin-left: auto;
+  padding: 5px 10px;
+  border: none;
+  background: #0095f6;
+  color: white;
+  border-radius: 5px;
+  }
