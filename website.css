@@ -5,8 +5,7 @@ body{
 .container{
     margin-top: 0;
     margin-left: 10px;
-    width: 0;
-    height: 0;
+    display: flex;
     flex-direction: column;
 }
 .top-container{
@@ -21,20 +20,21 @@ body{
     color: white;
     display: flex;
     flex-direction: column;
-    font-size: 9px;
+    font-size: 20px;
 }
-h1{
+span{
     padding: 8px;
     font-weight: normal;
 }
 h1.ins{
     padding-bottom: 30px;
     padding-top: 0;
+    font-size: 20px;
 }
-h1.fazla{
+span.fazla{
     padding-top: 40px;
 }
-.yazi{
+.right-title{
     color: white;
     font-size: 11px;
     display: inline-block;
@@ -70,7 +70,8 @@ min-width: 500px;
 }
 
 .content-wrapper {
-  margin-left: 330px;; 
+  margin-left: 330px;
+  margin-right: 450px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -92,7 +93,7 @@ min-width: 500px;
   color: white;
 }
 
-.kisi {
+.person {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -113,9 +114,10 @@ min-width: 500px;
 .post-footer i {
   margin-right: 10px;
   color: white;
+  display: inline;
 }
 
-p.aciklama{
+p.comment{
   border-bottom: 1px solid #ccc;
   padding-bottom: 20px;
 }
@@ -123,7 +125,11 @@ p.aciklama{
 .sidebar {
   flex: 1;
   min-width: 250px;
-  position: relative;
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  width: 280px;
+  height: auto;
   padding: 15px;
   background-color: black;
   color: white;
@@ -133,18 +139,18 @@ p.aciklama{
   margin: 0 0 15px;
   font-size: 16px;
 }
-.öneriler {
+.suggestion {
   display: flex;
-  align-items: end;
+  align-items: center;
   margin-bottom: 12px;
 }
-.öneriler img {
+.suggestion img {
   width: 40px; height: 40px;
   border-radius: 50%;
   margin-right: 10px;
 }
-.öneriler strong { display: block; }
-.öneriler button {
+.suggestion strong { display: block; }
+.suggestion button {
   margin-left: auto;
   border: none;
   background: #0095f6;
@@ -152,8 +158,12 @@ p.aciklama{
   border-radius: 5px;
   }
 .siz img{
+  display: inline;
   width: 40px; height: 40px;
   border-radius: 50%;
   margin-right: 10px;
   }
-.siz strong { display: inline-block; }
+.siz strong { 
+ display: inline; 
+ top: 100px;
+}
