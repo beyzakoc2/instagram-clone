@@ -16,11 +16,26 @@ body{
     height: 100vh;
     background-color: black;
     border-right: 1px solid #ccc;
-    padding: 20px 5px;
+    padding: 20px;
     color: white;
     display: flex;
     flex-direction: column;
-    font-size: 20px;
+}
+.main-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.main-item:hover {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+}
+.main-item i {
+  font-size: 20px;
 }
 span{
     padding: 8px;
@@ -31,8 +46,19 @@ h1.ins{
     padding-top: 0;
     font-size: 20px;
 }
-span.fazla{
+.main-item-more{
     padding-top: 40px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.main-item-more:hover{
+    background-color: black;
+    border-radius: 10px;
 }
 .right-title{
     color: white;
@@ -126,8 +152,8 @@ p.comment{
   flex: 1;
   min-width: 250px;
   position: fixed;
-  top: 60px;
-  right: 20px;
+  top: 100px;
+  right: 100px;
   width: 280px;
   height: auto;
   padding: 15px;
@@ -157,13 +183,33 @@ p.comment{
   color: white;
   border-radius: 5px;
   }
-.siz img{
-  display: inline;
+.your{
+  display: flex;
+  margin-bottom: 10px;
+}
+.your img{
   width: 40px; height: 40px;
   border-radius: 50%;
   margin-right: 10px;
   }
-.siz strong { 
- display: inline; 
- top: 100px;
+.your strong { 
+ display: block; 
+}
+.floating-message-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 70px;
+  background-color: #383839;
+  color: white;
+  padding: 12px;
+  border-radius: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+  z-index: 1000;
+}
+
+.floating-message-btn:hover {
+  background-color: #8b8a8a;
 }
