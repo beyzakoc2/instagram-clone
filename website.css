@@ -69,7 +69,7 @@ h1.ins{
     font-weight:lighter;  
 }
 .stories {
-  width: 610px;
+  width: 520px;
   display: flex;
   overflow: hidden;
   padding: 10px;
@@ -93,6 +93,7 @@ h1.ins{
 .feed {
 flex: 2;
 min-width: 500px;
+max-width: 600px;
 }
 
 .content-wrapper {
@@ -107,7 +108,8 @@ min-width: 500px;
 }
 
 .post {
-  justify-content: center;
+  width: 500px;
+  max-width: 550px;
   margin-bottom: 20px;
   border-radius: 5px;
 }
@@ -128,8 +130,9 @@ min-width: 500px;
 
 .post-image {
   width: 100%;
-  display: block;
-  border: 2px solid #ccc;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .post-footer {
@@ -141,6 +144,13 @@ min-width: 500px;
   margin-right: 10px;
   color: white;
   display: inline;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.post-footer i:hover{
+  background-color:black;
+  color: #383839;
 }
 
 p.comment{
@@ -212,4 +222,41 @@ p.comment{
 
 .floating-message-btn:hover {
   background-color: #8b8a8a;
+}
+
+@media (max-width:1310px) {
+  .top-container {
+    width: 60px;
+    padding: 20px 10px;
+  }
+
+  .main-item span,
+  .main-item-more span {
+    display: none;
+  }
+
+  .main-item,
+  .main-item-more {
+    justify-content: center;
+  }
+
+  h1.ins {
+    display: none;
+  }
+
+  .content-wrapper {
+    margin-left: 100px;
+  }
+
+  .stories {
+    margin-left: 100px;
+  }
+
+  .right-title {
+    margin-left: 100px;
+  }
+
+  .sidebar {
+    margin-left: 100px;
+  }
 }
