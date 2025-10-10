@@ -362,7 +362,124 @@ p.comment{
     font-size: 15px;
   }
 }
+/* mobile */
+@media(max-width:800px) {
+
+  .stories {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .story-extra {
+    display: none;
+  }
+
+.story img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .story-extra img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .story {
+    font-size: 13px;
+  }
+  
+  .story-extra {
+    font-size: 13px;
+  }
+
+  .feed {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 550px;
+  }
+
+  .post {
+    width: 100%;
+    max-width: 530px;
+  }
+
+  .container {
+    display: none;
+  }
+
+  .floating-message-btn span {
+    display: none;
+  }
+
+  .floating-message-btn {
+    border-radius: 50%;
+  }
+}
+@media(max-width:650px) {
+  .right-title {
+    display: none;
+  }
+
+  .stories {
+    top: 70px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: start;
+    position: relative;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    margin-top: 80px;
+  }
+
+  .feed {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .post {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media(max-width:540px) {
+  .post {
+    width: 480px;
+  }
+}
+
+@media(max-width:530px) {
+  .post {
+    width: 470px;
+  }
+}
+
+@media(max-width:520px) {
+  .post {
+    width: 460px;
+  }
+}
+
+@media(max-width:510px) {
+  .post {
+    width: 450px;
+  }
+}
+
+@media(max-width:500px) {
+  .post {
+    width: 440px;
+  }
+}
 /* 
-latest media will be examined
-will be made mobile compatible
+button will be prepared
+notifications and search 
 */
