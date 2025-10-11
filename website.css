@@ -238,7 +238,15 @@ p.comment{
   background-color: #8b8a8a;
 }
 
+.navbar {
+  color: white;
+}
+
 @media (max-width:1320px) {
+  .navbar {
+    display: none;
+  }
+
   .top-container {
     width: 60px;
     padding: 20px 10px;
@@ -302,11 +310,15 @@ p.comment{
     font-size: 30px;
     padding: 10px;
   }
-
+}
   @media (max-width:1124px) {
+    .navbar {
+    display: none;
+  }
+
   .sidebar {
       display: none;
-    }
+  }
 
   .content-wrapper {
     flex-direction: column;
@@ -364,7 +376,6 @@ p.comment{
 }
 /* mobile */
 @media(max-width:800px) {
-
   .stories {
     display: flex;
     justify-content: center;
@@ -409,6 +420,10 @@ p.comment{
     display: none;
   }
 
+    .right-title {
+    display: none;
+  }
+
   .floating-message-btn span {
     display: none;
   }
@@ -416,13 +431,8 @@ p.comment{
   .floating-message-btn {
     border-radius: 50%;
   }
-}
-@media(max-width:650px) {
-  .right-title {
-    display: none;
-  }
 
-  .stories {
+    .stories {
     top: 70px;
     width: 100%;
     max-width: 600px;
@@ -448,12 +458,58 @@ p.comment{
     width: 100%;
     max-width: 500px;
   }
-}
 
-@media(max-width:540px) {
-  .post {
-    width: 480px;
+  .navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #121212;
+    flex-direction: row;
+    align-items: center;
+    border-top: 1px solid #333;
+    z-index: 2;
+    color: white;
   }
+
+  .center input {
+    width: 100%;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #2a2a2a;
+    color: white;
+    font-size: 14px;
+  }
+
+  .right i {
+    font-size: 18px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    justify-content: end;
+  }
+
+  .navbar button, .navbar select {
+    margin-left: 10px;
+    font-size: 18px;
+    color: white;
+    background: #2a2a2a;
+    border: none;
+    cursor: pointer;
+  }
+
+  .right {
+    justify-content: end;
+  }
+ 
+  .navbar option {
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 14px;
+}
 }
 
 @media(max-width:530px) {
@@ -479,7 +535,3 @@ p.comment{
     width: 440px;
   }
 }
-/* 
-button will be prepared
-notifications and search 
-*/
