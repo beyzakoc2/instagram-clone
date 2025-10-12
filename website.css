@@ -34,6 +34,23 @@ body{
   background-color: #1a1a1a;
   border-radius: 10px;
 }
+.main-item-search, .main-item-notification {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.main-item-search:hover {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+}
+.main-item-notification:hover {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+}
 .main-item i {
   font-size: 20px;
 }
@@ -221,7 +238,7 @@ p.comment{
 }
 .floating-message-btn {
   position: fixed;
-  bottom: 40px;
+  bottom: 60px;
   right: 70px;
   background-color: #383839;
   color: white;
@@ -253,12 +270,16 @@ p.comment{
   }
 
   .main-item span,
-  .main-item-more span {
+  .main-item-more span,
+  .main-item-notification span,
+  .main-item-search span {
     display: none;
   }
 
   .main-item,
-  .main-item-more {
+  .main-item-more,
+  .main-item-notification,
+  .main-item-search {
     justify-content: center;
   }
 
@@ -306,7 +327,10 @@ p.comment{
     margin-left: 100px;
   }
 
-  .main-item i {
+  .main-item i,
+  .main-item-search i,
+  .main-item-notification i,
+  .main-item-more i {
     font-size: 30px;
     padding: 10px;
   }
@@ -387,7 +411,7 @@ p.comment{
     display: none;
   }
 
-.story img {
+  .story img {
     width: 70px;
     height: 70px;
   }
@@ -416,11 +440,7 @@ p.comment{
     max-width: 530px;
   }
 
-  .container {
-    display: none;
-  }
-
-    .right-title {
+  .right-title {
     display: none;
   }
 
@@ -432,7 +452,7 @@ p.comment{
     border-radius: 50%;
   }
 
-    .stories {
+  .stories {
     top: 70px;
     width: 100%;
     max-width: 600px;
@@ -463,13 +483,14 @@ p.comment{
     display: flex;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     height: 60px;
-    background-color: #121212;
+    background-color: black;
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
-    z-index: 2;
+    z-index: 999;
     color: white;
     box-sizing: border-box;
   }
@@ -521,38 +542,123 @@ p.comment{
   }
 
   .navbar select:hover {
-    background-color: #2a2a2a;
+    background-color: #1e1e1e;
   }
 
-  .right
- 
   .navbar option {
   background-color: #1e1e1e;
   color: white;
   font-size: 14px;
 }
+
+  .top-container {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #ccc;
+    border-right: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    z-index: 2;
+  }
+
+  .main-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .main-item-more,
+  .main-item-search,
+  .main-item-notification {
+    display: none;
+  }
+
+  .main-item span, .main-item-more span {
+    display: none;
+  }
+
+  .ins, .main-item:last-child {
+    display: none;
+  }
+
+  .main-item:hover {
+    background-color: black;
+  }
+
+  .main-item i {
+    font-size: 30px;
+  }
+}
+@media(max-width:590px) {
+  .main-item {
+    justify-content: center;
+    align-items: center;
+    margin: 23px;
+    padding: 0;
+  }
+}
+
+@media(max-width:570px) {
+  .main-item {
+    justify-content: center;
+    align-items: center;
+    margin: 21px;
+    padding: 0;
+  }
+}
+
+@media(max-width:540px) {
+  .post {
+    width: 470px;
+  }
+  .main-item {
+    justify-content: center;
+    align-items: center;
+    margin: 19px;
+    padding: 0;
+  }
 }
 
 @media(max-width:530px) {
   .post {
-    width: 470px;
+    width: 460px;
+  }
+  .main-item {
+    justify-content: center;
+    align-items: center;
+    margin: 17px;
+    padding: 0;
   }
 }
 
 @media(max-width:520px) {
   .post {
-    width: 460px;
+    width: 450px;
+  }
+  .main-item {
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    padding: 0;
   }
 }
 
 @media(max-width:510px) {
   .post {
-    width: 450px;
+    width: 440px;
   }
 }
 
-@media(max-width:500px) {
+@media(max-width:50px) {
   .post {
-    width: 440px;
+    width: 430px;
   }
 }
