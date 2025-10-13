@@ -55,42 +55,57 @@ body{
   font-size: 20px;
 }
 span{
-    padding: 8px;
-    font-weight: normal;
+  padding: 8px;
+  font-weight: normal;
 }
 h1.ins{
-    padding-bottom: 30px;
-    padding-top: 0;
-    font-size: 20px;
+  padding-bottom: 30px;
+  padding-top: 0;
+  font-size: 20px;
 }
 .main-item-more{
-    padding-top: 40px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-    cursor: pointer;
-    transition: background 0.2s;
+  padding-top: 40px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 .main-item-more:hover{
-    background-color: black;
-    border-radius: 10px;
+  background-color: black;
+  border-radius: 10px;
 }
 .right-title{
-    color: white;
-    font-size: 11px;
-    display: inline-block;
-    margin-top: 30px ;
-    margin-left: 350px;
-    font-weight:lighter;  
+  color: #8b8a8a;
+  font-size: 18px;
+  display: flex;
+  gap: 5px;
+  margin-top: 30px ;
+  margin-left: 350px; 
+  font-weight: bold;
+}
+.right-title input[type="radio"] {
+  display: none;
+}
+.tab-label {
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s;
+  padding-bottom: 4px;
+}
+
+input#tab1:checked + label[for="tab1"],
+input#tab2:checked + label[for="tab2"] {
+  color: white;
 }
 .stories {
   width: 520px;
   display: flex;
-  overflow: hidden;
   padding: 10px;
   margin-left: 360px;
+  overflow: hidden;
 }
 
 .story {
@@ -363,7 +378,7 @@ p.comment{
   }
   
   .right-title {
-    font-size: 10px;
+    font-size: 18px;
     width: 100%;
     text-align: left;
     margin-left: calc(50% - 300px);
