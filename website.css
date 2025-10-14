@@ -105,7 +105,18 @@ input#tab2:checked + label[for="tab2"] {
   display: flex;
   padding: 10px;
   margin-left: 360px;
-  overflow: hidden;
+  overflow-x: auto; 
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.stories::-webkit-scrollbar {
+  height: 5px;
+}
+
+.stories::-webkit-scrollbar-thumb {
+  background-color: #2a2a2a;
+  border-radius: 10px;
 }
 
 .story {
@@ -264,11 +275,68 @@ p.comment{
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: background 0.3s;
   z-index: 1000;
+  font-weight: bold;
+  gap: 8px;
 }
 
 .floating-message-btn:hover {
   background-color: #8b8a8a;
 }
+
+.dm-toggle {
+    display: none;
+  }
+
+  /* DM kutusu */
+  .dm-box {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    width: 320px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    overflow: hidden;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 1100;
+  }
+
+  /* Checkbox işaretli ise DM kutusu açılır????? */
+  #dm-toggle:checked + label.floating-message-btn + .dm-box {
+    transform: scale(1);
+  }
+
+  /* DM başlık */
+  .dm-header {
+    background: #383839;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #8b8a8a;
+  }
+
+  /* Kapatma çarpısı */
+  .dm-close {
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  /* Mesajlar alanı */
+  .dm-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+    background: #383839;
+  }
 
 .navbar {
   color: white;
@@ -351,12 +419,12 @@ p.comment{
   }
 }
   @media (max-width:1124px) {
-    .navbar {
+  .navbar {
     display: none;
   }
 
   .sidebar {
-      display: none;
+    display: none;
   }
 
   .content-wrapper {
@@ -386,13 +454,13 @@ p.comment{
 
   .stories {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: start;
+    width: 550px;
     margin: 0 auto;
-  }
-
-  .story-extra {
-    display: none;
+    white-space: nowrap;
+    scroll-behavior: smooth;
   }
 
   .story img {
@@ -417,13 +485,12 @@ p.comment{
 @media(max-width:800px) {
   .stories {
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    top: 70px;
+    max-width: 600px;
+    position: relative;
     width: 100%;
     margin: 0 auto;
-  }
-
-  .story-extra {
-    display: none;
   }
 
   .story img {
@@ -469,9 +536,7 @@ p.comment{
 
   .stories {
     top: 70px;
-    width: 100%;
     max-width: 600px;
-    display: flex;
     justify-content: start;
     position: relative;
   }

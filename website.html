@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./website.css">
         <title>İnstagram Clone</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -38,9 +39,8 @@
         <div class="story"><img src="stories/sarı.png" alt=""><p>keremkc_41</p></div>
         <div class="story"><img src="stories/turuncu.jpg" alt=""><p>nuraykoc41</p></div>
         <div class="story-extra"><img src="stories/yeşil.jpg" alt=""><p >hazalerdm</p></div>
-        <!-- <div class="story"><img src="stories/cherry.png" alt=""><p>elisaasln</p></div>
+        <div class="story"><img src="stories/cherry.png" alt=""><p>elisaasln</p></div>
         <div class="story"><img src="stories/brown.jpg" alt=""><p>begumynt</p></div> 
-            can only be javascript??  -->
       </section>
 
       <div class="content-wrapper">
@@ -188,5 +188,19 @@
       <i class="fa fa-heart"></i>
     </div>
 </div>
-    </body>
-</html>
+<!-- bağlantı -->
+<input type="checkbox" id="dm-toggle" class="dm-toggle" />
+<label for="dm-toggle" class="floating-message-btn">
+  <i class="fa fa-paper-plane"></i><span>Mesajlar</span>
+</label>
+<div class="dm-box">
+  <!-- başlık -->
+  <div class="dm-header">
+    <span>Mesajlar</span>
+    <!-- çarpı -->
+    <label for="dm-toggle" class="dm-close">&times;</label>
+  </div>
+  <div class="dm-messages">
+    
+  </div>
+</div>
