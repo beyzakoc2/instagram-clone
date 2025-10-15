@@ -312,7 +312,7 @@ p.comment{
 
   /* DM başlık */
   .dm-header {
-    background: #383839;
+    background: #212328;
     color: white;
     padding: 10px;
     font-weight: bold;
@@ -331,11 +331,57 @@ p.comment{
 
   /* Mesajlar alanı */
   .dm-messages {
+    display: flex;
+    align-items: start;
     flex: 1;
     padding: 10px;
     overflow-y: auto;
     font-size: 14px;
-    background: #383839;
+    background: #212328;
+    flex-direction: column;
+    gap: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .dm-messages::-webkit-scrollbar-thumb {
+  background-color: #8b8a8a;
+  border-radius: 10px;
+  }
+
+  .dm-messages::-webkit-scrollbar {
+  width: 7px;
+  }
+
+  .message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  .message img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .dm-messages strong {
+    display: block;
+    color: white;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+
+  .message-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+  .dm-messages small {
+    color: #A8A8A8;
+    font-size: 10px;
   }
 
 .navbar {
