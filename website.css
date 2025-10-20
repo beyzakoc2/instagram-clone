@@ -503,8 +503,10 @@ p.comment{
     overflow-x: auto;
     overflow-y: hidden;
     justify-content: start;
-    width: 550px;
+    width: 100%;
+    max-width: 550px;
     margin: 0 auto;
+    padding: 10px 0;
     white-space: nowrap;
     scroll-behavior: smooth;
   }
@@ -533,7 +535,6 @@ p.comment{
     display: flex;
     justify-content: start;
     top: 70px;
-    max-width: 600px;
     position: relative;
     width: 100%;
     margin: 0 auto;
@@ -563,11 +564,6 @@ p.comment{
     max-width: 550px;
   }
 
-  .post {
-    width: 100%;
-    max-width: 530px;
-  }
-
   .right-title {
     display: none;
   }
@@ -580,24 +576,11 @@ p.comment{
     border-radius: 50%;
   }
 
-  .stories {
-    top: 70px;
-    max-width: 600px;
-    justify-content: start;
-    position: relative;
-  }
-
   .content-wrapper {
     flex-direction: column;
     align-items: center;
     margin: 0;
     margin-top: 80px;
-  }
-
-  .feed {
-    width: 100%;
-    max-width: 550px;
-    margin: 0 auto;
   }
 
   .post {
@@ -743,7 +726,7 @@ p.comment{
 
 @media(max-width:540px) {
   .post {
-    width: 470px;
+    width: 100%;
   }
   .main-item {
     justify-content: center;
@@ -755,7 +738,7 @@ p.comment{
 
 @media(max-width:530px) {
   .post {
-    width: 460px;
+    width: 100%;
   }
   .main-item {
     justify-content: center;
@@ -767,7 +750,7 @@ p.comment{
 
 @media(max-width:520px) {
   .post {
-    width: 450px;
+    width: 100%;
   }
   .main-item {
     justify-content: center;
@@ -779,12 +762,12 @@ p.comment{
 
 @media(max-width:510px) {
   .post {
-    width: 440px;
+    width: 100%;
   }
 }
 
-@media(max-width:50px) {
+@media(max-width:500px) {
   .post {
-    width: 430px;
+    width: 100%;
   }
 }
