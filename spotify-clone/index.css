@@ -6,8 +6,9 @@ body{
     width: 30%;
     display: flex;
     background-color: #121212;
-    margin: 10px;
+    margin: 5px;
     flex-direction: column;
+    border-radius: 8px;
 }
 .playlist img{
     width: 55px;
@@ -21,4 +22,32 @@ body{
 .playlist{
     display: flex;
     color: white;
+    padding: 10px;
+}
+.bookcase{
+    margin: 20px;
+    font-weight: bold;
+    display: inline;
+    font-size: 16px;
+}
+.create{
+    display: inline;
+    font-weight: bold;
+    margin: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 30px;
+    border: 1px solid #2A2A2A;
+    background-color: #2A2A2A;
+}
+.left-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+}
+.left-title i{
+    
 }
